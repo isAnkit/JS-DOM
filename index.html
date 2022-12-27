@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>JS Document Object Model</title>
+  </head>
+  <body>
+    
+    <pre>
+
+        <center><h1 id="h1-hd"> JS Assignment : Document Object Model (DOM)</h1></center>
+
+        <h2>1.  Question 1</h2>
+
+        Write the code to access element which is having id as "text"
+      
+      >> Answer
+
+        <textarea>
+          
+          const target = document.getElementById("text");
+
+        </textarea>
+    
+    <h2> 2. Question 2</h2>
+
+     Write the code to access element which is having tag as "h1"
+
+    >> Answer
+
+       <textarea>
+  
+        const target = document.getElementsByTagName("h1");
+
+     </textarea>
+
+        <h2>3. Question 3</h2>
+
+        Write the code to access element which is having class as "box"
+        
+            >> Answer
+
+     <textarea>
+            
+            const target = document.getElementsByClassName("box");
+
+        </textarea>
+
+    <h2>4. Question 4</h2>
+
+    <h1 id="h1-hello">&nbsp;&nbsp;&nbsp;&nbsp;Hello </h1>
+
+    Change the heading from ""Hello"" to ""Hello World"" using DOM functions
+
+    >> Answer
+
+    <button>Click Here To Change The Heading</button>
+
+    <textarea>
+
+      // Code 
+
+      const heading = document.getElementById("h1-hello");
+      const button = document.getElementsByTagName("button")[0];
+
+      button.addEventListener("click", function() {
+      heading.innerHTML = "&nbsp;&nbsp;&nbsp;&nbsp;Hello World";
+      });
+    </textarea>
+
+    <h2>5. Question 5</h2>
+
+    Create three cards on HTML page and arrange them using flex property in row or horizontal direction and also create button 
+    at the bottom named "Change Flex direction". When user clicks on this button,the cards arrangement should be changed to vertical direction.
+
+    >> Answer
+
+    <div class="maincard">
+     <div class="card"></div>
+     <div class="card"></div>
+     <div class="card"></div>
+    </div>
+
+    <button>Change Flex Direction</button>
+
+    <textarea>
+    
+    // Code
+
+    const direct = document.querySelector(".maincard");
+      button = document.getElementsByTagName("button")[1];
+
+      button.addEventListener("click", function() {
+          direct.style.flexDirection = "column";
+      });
+
+    </textarea>
+    
+    <h2>6. Question 6</h2>
+
+    What’s the difference between window vs document?
+
+    >> Answer
+
+    <textarea style="width:820px;height: 400px;">
+    
+      The window object represents the top-level window of the browser, and it provides access to 
+      properties and methods that are related to the browser window, such as the innerWidth and 
+      innerHeight properties (width and height of the browser window), and other methods like
+      scrollTo.
+
+      Whereas,The document object represents the root of the Document Object Model(DOM). It represents the 
+      content and structure of the webpage. It provides access to properties and methods that are 
+      related to the content and structure of the webpage, for example title property, which 
+      represents the title of the webpage, and the getElementById method, which returns a reference 
+      to an element with a specified ID.
+      
+      We can use the window and document objects to interact with the web browser and the webpage.
+      
+    </textarea>
+
+    <h2>7. Question 7</h2>
+
+    Add one style attribute and give text color as red and id attribute and give the id value as 
+    "heading" in the above given h1 tag using DOM functions.
+
+    >> Answer
+
+    <h1 id="h1-3">Hello </h1>
+    <button>Click To See Changes</button>
+
+    <textarea>
+    
+      // Code 
+
+      const heading2 = document.getElementById("h1-3");
+      button = document.getElementsByTagName("button")[2];
+      button.addEventListener("click", function() {
+      heading2.setAttribute("style", "color: red");
+      heading2.setAttribute("id", "heading");
+      });
+      
+    </textarea>
+
+    <h2>8. Question 8</h2>
+
+   Create an HTML page having content as Hello world and a button named Replace Text. 
+   When user will click on this button page content should be changed to "Welcome to Elevation academy"
+
+    >> Answer
+
+    <h1 id="h1-4">Hello World</h1>
+    <button>Replace Text</button>
+
+    <textarea>
+    
+      // Code 
+
+    const heading3 = document.getElementById("h1-4");
+      button = document.getElementsByTagName("button")[3];
+
+    button.addEventListener("click", function() {
+      heading3.innerHTML = "Welcome to Elevation academy";
+    });
+
+    </textarea>
+
+    <h2>9. Question 9</h2>
+
+   Write code to implement timer clock using JS -- display HH:MM:SS -- the time should keep updating 
+   every second.
+
+    >> Answer
+
+    <div class="time-display">
+      <p class="time-box">TIME</p>
+      <div class="timed1"><span class="timed1-text" id="hours"></span><br>hours</div>
+      <p class="obl">:</p>
+      <div class="timed1"><span class="timed1-text" id="minutes"></span><br>mins</div>
+      <p class="obl">:</p>
+      <div class="timed1"><span class="timed1-text" id="seconds"></span><br>secs</div>
+    </div>
+
+    <textarea>
+    
+      // Code
+
+      setInterval(function() {
+        var now = new Date();
+        var hours = now.getHours();
+        var minutes = now.getMinutes();
+        var seconds = now.getSeconds();
+      
+        if (hours > 12) {
+          hours -= 12;
+        } else if (hours === 0) {
+          hours = 12;
+        }
+        if (minutes < 10) {
+          minutes = "0" + minutes;
+        }
+        if (seconds < 10) {
+          seconds = "0" + seconds;
+        }
+      
+        document.getElementById("hours").innerText = hours;
+        document.getElementById("minutes").innerText = minutes;
+        document.getElementById("seconds").innerText = seconds;
+      
+      }, 1000);
+
+    </textarea>
+
+    <h2>10. Question 10</h2>
+
+   Create a select drop down for selecting Year 20-21, 21-22 etc. Print the item text selected
+
+    >> Answer
+
+    <p id="dropdown-here"></p>
+
+    <textarea style="width: 680px; height: 400px;">
+
+      // Code
+
+
+      const dropdownHere = document.getElementById("dropdown-here");
+
+      const selection = document.createElement("Select");
+
+      for (let yr = 20; yr <= 30; yr++) {
+        const options = document.createElement("Option");
+        options.value = yr;
+        options.innerHTML = `${yr}-${yr + 1}`;
+        selection.appendChild(options);
+      }
+
+      dropdownHere.appendChild(selection);
+
+      const res = document.createElement("div");
+      res.id = "result";
+      dropdownHere.appendChild(res);
+
+      selection.addEventListener("change", function() {
+        const selectedVal = selection.options[selection.selectedIndex].innerHTML;
+        res.innerHTML = "";
+        res.appendChild(document.createTextNode(`Year ${selectedVal} is selected`));
+      });
+
+    </textarea>
+   
+  
+    </pre>
+    <script src="./script.js"></script>
+  </body>
+</html>

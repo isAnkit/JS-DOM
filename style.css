@@ -1,0 +1,117 @@
+body {
+  background-color: lightblue;
+}
+
+@keyframes ny {
+  0% {
+    border-color: rgb(163, 194, 25);
+  }
+  50% {
+    border-color: rgb(192, 80, 77);
+  }
+  100% {
+    border-color: rgb(151, 179, 52);
+  }
+}
+
+#h1-hd {
+  width: 700px;
+  border: 2px solid black;
+  animation: ny 1.2s infinite;
+}
+
+.code {
+  width: 500px;
+  height: 280px;
+  color: white;
+  background-color: grey;
+  margin-left: 70px;
+}
+
+
+h2 {
+  display: inline;
+  font-size: 17px;
+}
+
+textarea {
+  width: 600px;
+  height: 400px;
+  background: linear-gradient(to right, #333, #777);
+  color: white;
+  margin-left: 55px;
+  font-size: 14px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+pre{
+  font-size: 14px;
+}
+
+.maincard{
+  display: flex;
+  gap:15px;
+  flex-direction: row;
+}
+
+.card{
+  width: 200px;
+  height: 200px;
+  background-color: brown;
+}
+
+button{
+  width:230px;
+  height:30px;
+  background-color: coral;
+  border: none;
+  border-radius: 10px;
+  color: rgba(25, 53, 51, 0.979);
+  cursor: pointer;
+}
+
+.time-display {
+  width: 450px;
+  height: 130px;
+  background-color: white;
+  border-radius: 10px;
+  color: black;
+  display: flex;
+  gap: 10px;
+}
+
+.time-box {
+  color: #622663;
+  font-size: 20px;
+  font-weight: 600;
+  margin-top: 50px;
+  margin-left: 30px;
+  margin-right: 12px;
+}
+.timed1 {
+  width: 80px;
+  height: 90px;
+  background-image: url(./timeline.svg);
+  text-align: center;
+  color: #921694;
+  font-size: 30px;
+  margin-top: 20px;
+}
+
+.timed1-text {
+  margin-top: 10px;
+}
+
+.obl {
+  font-size: 40px;
+  color: #ba12bd;
+  margin-top: 40px;
+}
+
+select{
+  background-color: #0dd65a;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 120px;
+  font-size: 18px;
+}
